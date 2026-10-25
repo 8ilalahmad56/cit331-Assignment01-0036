@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>QU Club | Registration</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body id="top">
+    <header class="site-header">
+        <a href="index.html" class="brand-logo">
+            <img src="images/images.png" alt="QU Club logo" width="40" height="40">
+            <span>QU CLUB</span>
+        </a>
+       <nav aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="event.html">Events</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+       </nav>
+     </header>
+     
+     <main id="main">
+       <h1>Registration Form</h1>
+       <p>For Registration fill this registration form.</p>
+       
+       <form id="register-form" action="#" method="post" novalidate>
+         
+         <!-- Full Name Fieldset -->
+         <fieldset>
+           <legend>Full Name</legend>
+           <div class="form-row">
+             <div class="field">
+               <label for="fname">First Name</label>
+               <input type="text" id="fname" name="fname" minlength="3" maxlength="20" placeholder="e.g. Bilal">
+             </div>
+             <div class="field">
+               <label for="lname">Last Name</label>
+               <input type="text" id="lname" name="lname" required minlength="3" maxlength="20" placeholder="e.g. Ahmad">
+             </div>
+           </div>
+         </fieldset>
+
+         <!-- Number & Email Fieldset -->
+         <fieldset>
+           <legend>Number & Email</legend>
+           <div class="form-row">
+             <div class="field">
+               <label for="phone">Phone Number</label>
+               <input type="tel" id="phone" name="phone" required pattern="03[0-9]{9}" placeholder="03000000000">
+             </div>
+             <div class="field">
+               <label for="email">Email</label>
+               <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9.+%-_]+@qu\.edu\.pk" placeholder="24l-0036@qu.edu.pk">
+             </div>
+           </div>
+         </fieldset>
+
+         <!-- Student ID & Department Fieldset -->
+         <fieldset>
+           <legend>Student ID & Department</legend>
+           <div class="form-row">
+             <div class="field">
+               <label for="std-id">Student ID</label>
+               <input type="text" id="std-id" name="std_id" required pattern="[a-zA-Z0-9-]{7}" placeholder="24l-0036">
+             </div>
+             <div class="field">
+               <label for="department">Department</label>
+               <input type="text" id="department" name="department" required minlength="3" maxlength="30" placeholder="e.g. computer science">
+             </div>
+           </div>
+         </fieldset>
+
+         <!-- Semester & Event Fieldset -->
+         <fieldset>
+           <legend>Semester & Event</legend>
+           <div class="form-row">
+             <div class="field">
+               <label for="semester">Semester</label>
+               <select id="semester" name="semester" required>
+                 <option value="" disabled selected>-- Choose Semester --</option>
+                 <option value="1">1st Semester</option>
+                 <option value="2">2nd Semester</option>
+                 <option value="3">3rd Semester</option>
+                 <option value="4">4th Semester</option>
+                 <option value="5">5th Semester</option>
+                 <option value="6">6th Semester</option>
+                 <option value="7">7th Semester</option>
+                 <option value="8">8th Semester</option>  
+               </select>  
+             </div>
+             <div class="field">
+               <label for="event">Event</label>
+               <select id="event" name="event" required>
+                 <option value="" disabled selected>-- Choose Event --</option>
+                 <option value="web-bootcamp">Full-Stack Web Development Bootcamp</option>
+                 <option value="code-sprint">Code Sprint: Annual Debugging Challenge</option>
+                 <option value="ai-seminar">Intro to Artificial Intelligence & Python</option>
+                 <option value="networking">Tech Career Launchpad & Networking Meetup</option>
+               </select>
+             </div>
+           </div>
+         </fieldset>
+         
+         <button type="submit" class="btn">Register</button>
+       </form>
+
+       <figure class="logo-figure">
+         <img src="images/images.png" alt="QU Club logo" width="120" height="120">
+         <figcaption>QU CLUB</figcaption>
+       </figure>
+     </main>
+     
+     <footer class="site-footer">
+       <p>&copy; 2026 QU Club &bull; Built for Assignment</p>
+     </footer>
+     <script src="script.js"></script>
+  </body>
+</html>
